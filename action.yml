@@ -1,0 +1,30 @@
+name: 'SSH remote command execute'
+description: 'Executing remote ssh commands'
+author: 'Christopher Schicho'
+inputs:
+  host:
+    description: 'ssh host'
+  port:
+    description: 'ssh port'
+    default: 22
+  user:
+    description: 'ssh user'
+  key:
+    description: 'ssh key'
+  ssh_timout:
+    description: 'timeout ssh connection'
+    default: '30s'
+  command_timout:
+    description: 'timeout command execution'
+    default: '10m'
+  command:
+    description: 'commands to execute'
+  verbose:
+    description: 'enable verbose mode'
+    default: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'terminal'
+  color: 'gray-dark'
