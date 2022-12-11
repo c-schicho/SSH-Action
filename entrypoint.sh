@@ -3,8 +3,6 @@
 SSH_PATH="$HOME/.ssh"
 SSH_FILE_PATH="$SSH_PATH/ssh_key"
 
-set -eu
-
 if [ ! -d "$SSH_PATH" ]; then
   mkdir "$SSH_PATH"
 fi
