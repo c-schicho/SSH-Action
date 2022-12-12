@@ -11,17 +11,8 @@ inputs:
     description: 'ssh user'
   key:
     description: 'ssh key'
-  ssh_timeout:
-    description: 'timeout ssh connection'
-    default: '30s'
-  command_timeout:
-    description: 'timeout command execution'
-    default: '10m'
   command:
     description: 'commands to execute'
-  verbose:
-    description: 'enable verbose mode'
-    default: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
