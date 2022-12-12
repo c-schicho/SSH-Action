@@ -1,6 +1,6 @@
 name: 'SSH remote command execute'
 description: 'Executing remote ssh commands'
-author: 'Christopher Schicho'
+author: 'c-schicho'
 inputs:
   host:
     description: 'ssh host'
@@ -11,10 +11,10 @@ inputs:
     description: 'ssh user'
   key:
     description: 'ssh key'
-  ssh_timout:
+  ssh_timeout:
     description: 'timeout ssh connection'
     default: '30s'
-  command_timout:
+  command_timeout:
     description: 'timeout command execution'
     default: '10m'
   command:
