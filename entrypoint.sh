@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -eu
+
 SSH_PATH="$HOME/.ssh"
 SSH_FILE_PATH="$SSH_PATH/ssh_key"
 
@@ -18,32 +20,11 @@ chmod 600 "$SSH_FILE_PATH"
 
 echo Connecting to ssh host
 
-timeout "$INPUT_SSH_TIMEOUT" ssh $INPUT_HOST -l $INPUT_USER -p $INPUT_PORT -i $SSH_FILE_PATH
+sh -c "ssh $INPUT_HOST -l $INPUT_USER -p $INPUT_PORT -i $SSH_FILE_PATH"
 
-if [ $? -eq 124 ]; then
-  echo "SSH login timed out"
-  exit 1
-fi
-
-if [ $? -eq 0 ]; then
-  echo "SSH login successful"
-else
-  echo "SSH login failed"
-  exit 1
-fi
-
+echo Connecting to ssh host success
 echo Executing command
 
-timeout "$INPUT_COMMAND_TIMEOUT" $INPUT_COMMAND
+sh -c "$INPUT_COMMAND"
 
-if [ $? -eq 124 ]; then
-  echo "SSH command execution timed out"
-  exit 1
-fi
-
-if [ $? -eq 0 ]; then
-  echo "SSH command execution successful"
-else
-  echo "SSH command execution failed"
-  exit 1
-fi
+echo Executung command success
