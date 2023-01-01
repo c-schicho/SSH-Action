@@ -1,7 +1,7 @@
 # SSH-Action
 
-This is a simple action to execute a command on a remote host via ssh. The action only supports ssh keys currently,
-further options might be added in the future.
+This is a simple action which only offers the bare minimum of options to execute a command on a remote host via ssh. The
+action only supports ssh keys currently, further options might be added in the future.
 
 ### How to use this action
 
