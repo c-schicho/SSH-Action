@@ -19,14 +19,14 @@ if [ ! -f "$SSH_KEY_PATH" ]; then
   touch "$SSH_KEY_PATH"
 fi
 
-echo "$INPUT_KEY" >"$SSH_KEY_PATH"
+echo "$INPUT_KEY" > "$SSH_KEY_PATH"
 
 chmod 700 "$SSH_PATH"
 chmod 600 "$SSH_KEY_PATH"
 chmod 600 "$SSH_KNOWN_PATH"
 
-echo "$INPUT_COMMAND" >"$COMMAND_PATH"
-echo "exit \$?" >>"$COMMAND_PATH"
+echo "$INPUT_COMMAND" > "$COMMAND_PATH"
+echo "exit \$?" >> "$COMMAND_PATH"
 
 echo Start exectuting remote command
 
