@@ -1,4 +1,4 @@
-name: 'SSH remote command execute'
+name: 'SSH remote command execution'
 description: 'Executing remote ssh commands'
 author: 'c-schicho'
 inputs:
