@@ -23,7 +23,7 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         user: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
-        script: echo Hello world!
+        command: echo Hello world!
 ```
 
 The port is optional and only needs to be specified when the used port is not the default port `22`.
